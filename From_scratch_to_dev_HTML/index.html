@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head> <!-- Head permet d'inclure certaines choses tout ça n'est pas visible sur la page web -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre de la page (pour commenter c'est ctrl+:) -->
+    <title>Tuto_html</title>
+    <!-- on inclue notre image html5 en tant que incone d'onglet-->
+    <link rel="shortcut icon" href="html5.jpg"> 
+    <!-- rel permet de mettre cette image dans l'icone de la page href donne le lien vers notre image -->
+    
+</head>
+<body>
+    <header>    <!-- le header correspond à l'introduction de la page donc il est au début -->
+        <section> <!-- section permet de séparer notre body en plusieur section -->
+            <div> <!-- pour faire des plus petites partie que des sections on mets en géneral des divs -->
+                <h1>Le tuto de HTML Texte</h1>
+                <!-- il y 6 type de titre H1 et le plus grand et H6 et plus petit moi je pensais juste que c'est pour dire titre 6 etc mais non sa définit leur taille -->
+                <p><!-- p pour paragraphe -->
+                    Texte <strong>super</strong> <em>Beau !!!</em> <span>oe il est vraiment incroyable ce texte</span>.
+                        <!-- em = italique strong = gras span = permet de ne pas revenir à la ligne  -->
+                </p>
+                <span>Le span permet de ne pas revenir a la ligne après ce text</span>
+                <span>oui</span>
+                <!-- les deux ligne de span ce suive sans revenir à la ligne contrairement au p qui renvoie automatiquement a la ligne -->
+            </div>
+        <div> 
+            <h2>Le tuto de HTML Image</h2>
+             <img src="logo_capsule_corp.jpg" height="200" alt="Le logo de capsule logo_capsule_corp">
+             <!-- src correspond au lien de notre image  heigh permet de définir la hauteur de notre image alt et le texte pour une personne non voyante -->
+        </div>
+    </header>
+        <div> 
+            <h3>Le tuto de HTML les listes</h3>
+            <ul> <!-- ul = unordered list pour liste sans ordre -->
+                <li>chat</li> <!-- liste -->
+                <li>chat</li>
+                <li>chat</li>
+                <!-- pour faire des copiers coller rapide dans une direction selectionne le texte puis majuscule (la fleche) + ALT + fleche vers le bas -->
+            </ul>
+            <ol><!-- ol = ordered list pour liste avec un ordre définie par des chiffres -->
+                <li>chien</li><!-- liste -->
+                <li>chien</li>
+                <li>chien</li>    
+            </ol>
+        </div>
+        <div> 
+            <h4>Le tuto de HTML les tableaux</h4>
+            <!-- table nous permet de faire un tableau border permet d'encadrer notre tableau -->
+            <!-- width va prendre 50% de la page quelque soit sa taille -->
+            <table border = "1" width = "50%">
+                <!-- On commence en mettant Une legende a notre tableaux (en anglais legende c'est caption) -->
+                <caption>Population d'europe</caption>
+                <!-- Puis une En-tête qui correspond à thead (t pour table est head pour head...) -->
+                <thead>
+                    <tr><!-- tr fais une ligne -->
+                        <th>Pays</th> <!-- th Une colonne -->
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>France</th>
+                        <th>66M</th>
+                    </tr>
+                    <tr>
+                        <th>Allemagne</th>
+                        <th>82M</th>
+                        
+                    </tr>
+                    <tr>
+                        <th>Espagne</th>
+                        <th>47M</th>
+                    </tr>
+
+                </tbody>
+        </table>
+        </div>  
+        <div> 
+            <h5><span>&#10024;</span> Le tuto de HTML LIEN</h5>
+            <!-- pour un lien on note "a" pour ancre en anglais c'est anchor -->
+            <a href="https://htmlcheatsheet.com/" target="_blank">Site Html qui s'apelle cheatsheet très utile pour coder du html</a>
+            <!-- pour ne pas quitter sa page on rajoute target="_blank" -->
+            <!-- cheat sheet permet de voir ce que l'ont peut faire avec le html c'est comme un super block note -->
+            <!-- la balise a ne revient pas a la ligne donc on fait un br -->
+            <br> <!-- si on fait pas ça les deux sont a la suites -->
+            <a href="https://www.toptal.com/designers/htmlarrows/symbols/" target="_blank">Site permettant d'avoir toute les icones en HTML</a>
+            <!-- toptal permet d'insérer des logos html je vais le mettre a coter d'un lien google et au titre -->
+            <br>
+            <span>&#10021;</span> <a href="https://www.google.com/">google</a>
+            <br>
+            <span>&#10004</span><a href="https://pixabay.com/fr/">Lien avec des videos et des photos</a>
+
+        </div>
+        <div> 
+            <h6>Le tuto de HTML VIDEO</h6>
+            <!-- pour faire rentrer une video on met video -->
+            <video src="video_ile.mp4" autoplay loop muted height="300"></video>
+            <!-- ensuite on peut lui donner des proprietes -->
+            <!-- autoplay = Joue des que la pages et lancer loop = des que tu as fini tu relance la video -->
+            <!-- muted = enleve le son height pour redimensionner la video  -->
+        </div>
+    </section>
+
+    <section>
+        <h2>Formulaire</h2> 
+        <!-- Pour entrer un formulaire on met form -->
+        <form action="/action.php" method="post">
+            <!-- quand on soumet le formulaire il va chercher le fichier action.php -->
+            <label for="Nom">Votre Nom :</label> <!-- label (texte) qui sera connecter a notre input via son id -->
+            <input type="text" id="Nom" placeholder="Ecrivez votre Nom"> <!-- input permet de créer une case ou l'on peut rentrer du texte directement sur le site -->
+            <!-- placeholder permet d'écrire un petit texte qui sert de description sur le site -->
+            <!-- maintenat je vais placer un label devant un input  qui sera connecter a mon input -->
+            <br>
+            <label for="Prenom">Votre Prenom :</label>
+            <input type="text" placeholder="Ecrivez votre Prenom" id="Prenom">
+            <!-- Donc maintenant si je clique sur Prenom je peux directement écrire (je fais pareil pour NOM) -->
+            <br>
+            <label for="Age">Votre Age</label>
+            <input id="Age" type="number" placeholder="Entrez votre Age" min="0" max="12" step="1" > <!-- Permet de demander que des nombres -->
+            <!-- je lui dit qu'il peut mettre au min 0 max 120 et qu'il peut aller de 1 à 1 -->
+            <br>
+            <!-- Input select -->
+            <label for="Genre">Votre Genre</label> <!-- je relie le label a Genre -->
+            <select  id="Genre"><!-- je crée une selection en mettant select puis l'id -->
+                <option value="Homme">Homme</option><!-- puis je crée les option de ma liste -->
+                <option value="Femme">Femme</option>
+                <option selected value="Dophin asiatique">Dophin asiatique</option>                <!-- ici je dis que la valeur selecter par defaut est dophin asiatique -->
+            </select><br>
+            <div>
+                <!-- Input radio -->
+
+                <!-- il permet de selectionner à l'aide de point -->
+                <input type="radio" name="types" id="Human" checked><!-- checked = par défault -->
+                <label for="Human">Humain</label>
+                <!-- si il ont tous le même name alors il sont connecter donc on poura mettre un point que dans un des trois -->
+                <input type="radio" name="types" id="Dog">
+                <label for="Dog">chien</label>
+                
+                <input type="radio"name="types" id="Cat">
+                <label for="Cat">Chat</label>
+            </div>
+            <!-- je vais creer un espace pour que l'utilisateur tape du texte -->
+            <textarea name="zone de texte" id="pas besoin" cols="30" rows="10" placeholder="Tu peux te régaler a écrire"></textarea>
+            <br>
+            <!-- Input check box c'est une case que tu peux cocher -->
+            <input type="checkbox" id="contrat">
+            <label for="contrat">Accepter le contrat vite morgane clique sur moi !</label> 
+            <!-- Input boutton pour valider -->
+            <input type="submit" value="Valider"><br> <!-- submit = bouton qui envoie  value = ce qui a marqué sur le bouton-->
+        </form> 
+    </section>
+    <!-- Mail & envoie de fichier -->
+    <footer> <!-- de la même maniere qu'il a un header pour le debut il y a un <footer> pour la fin -->
+        <a href="mailto:realistedem@gmail.com">Email du Createur</a><br>
+        <!-- ouvre un lien vers une adresse mail (mailto: ...) -->
+        <a href="Notice.txt" download="Notice.txt">Telecharger la notice</a>
+    </footer>
+</body>
+</html>
+<br>
+fonction i2C c'est un demon qui tourne en arriere plan 
+init 
+prog qui ecrit a la trame
+cross compiler :
+compiler sur une machine pour un processeur arm
+installer un compilateur 
+
+
+ok il me faut un main.c qui execute mes commande de l'écran 
+puis il faut que je le cross compile c'est a dire que je le compile sur une machine linux puis que je le compile en arm
